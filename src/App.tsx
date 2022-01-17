@@ -72,7 +72,7 @@ const App = () => {
         {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (<button className="start" onClick={startTrivia}>
           Start
         </button>) : null}
-        {gameOver && <p className="score">Score: {score}</p>}
+        {userAnswers.length === TOTAL_QUESTIONS && <p className="score">Score: {score}</p>}
         {loading && <p>Loading questions...</p>}
         {!loading && !gameOver && <QuestionCard 
           questionNr={number + 1}
